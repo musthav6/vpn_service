@@ -3,7 +3,7 @@
     git clone https://github.com/musthav6/vpn_service.git
 
 2. Перейдіть в директорію проекту:
-    cd your-repo-name
+    cd vpn_service
 3. Зберіть та запустіть контейнери:
     docker-compose up --build
 
