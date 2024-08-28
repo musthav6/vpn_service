@@ -1,0 +1,29 @@
+{% extends "vpn/base.html" %}
+
+{% block content %}
+    <h2 class="text-center">Статистика використання</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Сайт</th>
+            <th>Дата та час</th>
+            <th>Обсяг відправлених даних</th>
+            <th>Обсяг отриманих даних</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for visit in visits %}
+            <tr>
+                <td>{{ visit.site.name }}</td>
+                <td>{{ visit.timestamp }}</td>
+                <td>{{ visit.data_sent }} байт</td>
+                <td>{{ visit.data_received }} байт</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">Немає даних для відображення.</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

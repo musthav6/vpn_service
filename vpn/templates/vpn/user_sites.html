@@ -1,0 +1,15 @@
+{% extends "vpn/base.html" %}
+
+{% block content %}
+    <h2 class="text-center">Ваші сайти</h2>
+    <a class="btn btn-primary mb-3" href="{% url 'add_site' %}">Додати новий сайт</a>
+    <ul class="list-group">
+        {% for site in sites %}
+            <li class="list-group-item">
+                <a href="{% url 'proxy' site.id %}">{{ site.name }}</a>
+            </li>
+        {% empty %}
+            <li class="list-group-item">У вас немає доданих сайтів.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

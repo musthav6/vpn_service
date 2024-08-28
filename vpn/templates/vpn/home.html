@@ -1,0 +1,12 @@
+{% extends "vpn/base.html" %}
+
+{% block content %}
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Ласкаво просимо до VPN сервісу!</h1>
+        <p class="lead">Це ваш персональний VPN сервіс, який допоможе вам безпечно та анонімно переглядати вебсайти.</p>
+        <hr class="my-4">
+        <p>Щоб скористатися послугами сервісу, будь ласка, увійдіть або зареєструйтеся, якщо ви ще не маєте акаунта.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Увійти</a>
+        <a class="btn btn-secondary btn-lg" href="{% url 'register' %}" role="button">Зареєструватися</a>
+    </div>
+{% endblock %}
